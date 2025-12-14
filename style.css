@@ -1,0 +1,209 @@
+/* Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Hide scrollbar */
+html, body {
+    overflow-x: hidden;
+}
+
+/* HEADER / MENU */
+.menu-bar {
+    width: 100%;
+    height: 60px;
+    background: #1F3B63;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: #fff;
+    position: relative;
+}
+
+.menu-bar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+}
+
+.menu-bar .nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.menu-bar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menu-bar .nav-links a:hover {
+    color: #e5bb11;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* WELCOME SECTION */
+.welcome-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+
+.welcome-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.welcome-left h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.welcome-left p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.welcome-left button {
+    padding: 10px 20px;
+    background: #e5bb11;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.welcome-left button:hover {
+    background: #d4a500;
+}
+
+.welcome-right {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-right img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.about-section p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* SERVICES SECTION */
+.services-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+.services-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px 20px;
+    width: 250px;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(31, 60, 136, 0.18);
+}
+
+.service-card i {
+    font-size: 40px;
+    color: #1F3B63;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .menu-bar .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #1F3B63;
+        padding: 20px 0;
+    }
+
+    .menu-bar .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .welcome-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .welcome-left, .welcome-right {
+        text-align: center;
+    }
+
+    .services-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
